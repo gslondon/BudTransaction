@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		56960DFB20E6E2680074C030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960DFA20E6E2680074C030 /* AppDelegate.swift */; };
-		56960DFD20E6E2680074C030 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960DFC20E6E2680074C030 /* ViewController.swift */; };
 		56960E0020E6E2680074C030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56960DFE20E6E2680074C030 /* Main.storyboard */; };
 		56960E0220E6E2680074C030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56960E0120E6E2680074C030 /* Assets.xcassets */; };
 		56960E0520E6E2680074C030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56960E0320E6E2680074C030 /* LaunchScreen.storyboard */; };
 		56960E1020E6E2690074C030 /* BudTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E0F20E6E2690074C030 /* BudTransactionTests.swift */; };
+		56960E2220E6E5530074C030 /* TransactionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E1D20E6E5530074C030 /* TransactionListPresenter.swift */; };
+		56960E2320E6E5530074C030 /* TransactionListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E1E20E6E5530074C030 /* TransactionListWorker.swift */; };
+		56960E2420E6E5530074C030 /* TransactionListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E1F20E6E5530074C030 /* TransactionListModels.swift */; };
+		56960E2520E6E5530074C030 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2020E6E5530074C030 /* TransactionListViewController.swift */; };
+		56960E2620E6E5530074C030 /* TransactionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2120E6E5530074C030 /* TransactionListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,6 @@
 /* Begin PBXFileReference section */
 		56960DF720E6E2680074C030 /* BudTransaction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudTransaction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56960DFA20E6E2680074C030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56960DFC20E6E2680074C030 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56960DFF20E6E2680074C030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56960E0120E6E2680074C030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56960E0420E6E2680074C030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		56960E0B20E6E2690074C030 /* BudTransactionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudTransactionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56960E0F20E6E2690074C030 /* BudTransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudTransactionTests.swift; sourceTree = "<group>"; };
 		56960E1120E6E2690074C030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56960E1D20E6E5530074C030 /* TransactionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListPresenter.swift; sourceTree = "<group>"; };
+		56960E1E20E6E5530074C030 /* TransactionListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListWorker.swift; sourceTree = "<group>"; };
+		56960E1F20E6E5530074C030 /* TransactionListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListModels.swift; sourceTree = "<group>"; };
+		56960E2020E6E5530074C030 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		56960E2120E6E5530074C030 /* TransactionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				56960DFA20E6E2680074C030 /* AppDelegate.swift */,
-				56960DFC20E6E2680074C030 /* ViewController.swift */,
-				56960DFE20E6E2680074C030 /* Main.storyboard */,
-				56960E0120E6E2680074C030 /* Assets.xcassets */,
-				56960E0320E6E2680074C030 /* LaunchScreen.storyboard */,
+				56960E1B20E6E2A00074C030 /* Scenes */,
+				56960E1A20E6E27F0074C030 /* Storyboards */,
 				56960E0620E6E2680074C030 /* Info.plist */,
+				56960E0120E6E2680074C030 /* Assets.xcassets */,
 			);
 			path = BudTransaction;
 			sourceTree = "<group>";
@@ -94,6 +101,35 @@
 				56960E1120E6E2690074C030 /* Info.plist */,
 			);
 			path = BudTransactionTests;
+			sourceTree = "<group>";
+		};
+		56960E1A20E6E27F0074C030 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				56960DFE20E6E2680074C030 /* Main.storyboard */,
+				56960E0320E6E2680074C030 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		56960E1B20E6E2A00074C030 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				56960E1C20E6E2DF0074C030 /* TransactionList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		56960E1C20E6E2DF0074C030 /* TransactionList */ = {
+			isa = PBXGroup;
+			children = (
+				56960E1D20E6E5530074C030 /* TransactionListPresenter.swift */,
+				56960E1E20E6E5530074C030 /* TransactionListWorker.swift */,
+				56960E1F20E6E5530074C030 /* TransactionListModels.swift */,
+				56960E2020E6E5530074C030 /* TransactionListViewController.swift */,
+				56960E2120E6E5530074C030 /* TransactionListInteractor.swift */,
+			);
+			path = TransactionList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56960DFD20E6E2680074C030 /* ViewController.swift in Sources */,
+				56960E2420E6E5530074C030 /* TransactionListModels.swift in Sources */,
+				56960E2620E6E5530074C030 /* TransactionListInteractor.swift in Sources */,
+				56960E2520E6E5530074C030 /* TransactionListViewController.swift in Sources */,
 				56960DFB20E6E2680074C030 /* AppDelegate.swift in Sources */,
+				56960E2320E6E5530074C030 /* TransactionListWorker.swift in Sources */,
+				56960E2220E6E5530074C030 /* TransactionListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
