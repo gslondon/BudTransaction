@@ -14,7 +14,9 @@ import UIKit
 
 class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
-    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var dateLabel: FieldLabel!
+    @IBOutlet weak var valueLabel: FieldLabel!
 }
 
 
