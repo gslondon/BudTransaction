@@ -43,7 +43,6 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Long Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4Z-4o-1jD">
                                                             <rect key="frame" x="67" y="7" width="300" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -56,18 +55,18 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusx">
-                                                                    <real key="value" value="3"/>
-                                                                </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="£1999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKZ-MJ-WLs" customClass="FieldLabel" customModule="BudTransaction" customModuleProvider="target">
-                                                            <rect key="frame" x="200" y="33" width="167" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£1999.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKZ-MJ-WLs" customClass="FieldLabel" customModule="BudTransaction" customModuleProvider="target">
+                                                            <rect key="frame" x="301" y="33" width="66" height="21"/>
                                                             <color key="backgroundColor" white="0.41752340399999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" priority="750" constant="66" id="L1H-re-46C"/>
+                                                                <constraint firstAttribute="height" constant="21" id="xIe-bo-2IJ"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -80,7 +79,10 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="iKZ-MJ-WLs" secondAttribute="trailing" constant="8" id="S3A-F5-iKJ"/>
                                                         <constraint firstAttribute="height" constant="60" id="dHq-Vm-0OU"/>
+                                                        <constraint firstItem="iKZ-MJ-WLs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JrI-mZ-so4" secondAttribute="leading" constant="20" symbolic="YES" id="q25-uG-4R5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="iKZ-MJ-WLs" secondAttribute="bottom" constant="6" id="zEN-dB-QJt"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -98,6 +100,7 @@
                                             <outlet property="descriptionLabel" destination="G4Z-4o-1jD" id="y0W-bt-aqT"/>
                                             <outlet property="iconImageView" destination="85u-Ja-6LJ" id="oMT-7Y-iLJ"/>
                                             <outlet property="valueLabel" destination="iKZ-MJ-WLs" id="fA8-BB-xEl"/>
+                                            <outlet property="valueWidthConstraint" destination="L1H-re-46C" id="YzD-XI-nix"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

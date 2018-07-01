@@ -19,6 +19,7 @@
 		56960E2620E6E5530074C030 /* TransactionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2120E6E5530074C030 /* TransactionListInteractor.swift */; };
 		56960E2820E84C540074C030 /* Llyods_Favicon-1_161201_091641.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */; };
 		56960E2B20E8DB230074C030 /* FieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2A20E8DB230074C030 /* FieldLabel.swift */; };
+		56960E2D20E8F0D80074C030 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2C20E8F0D80074C030 /* GradientBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		56960E2120E6E5530074C030 /* TransactionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractor.swift; sourceTree = "<group>"; };
 		56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Llyods_Favicon-1_161201_091641.jpg"; sourceTree = "<group>"; };
 		56960E2A20E8DB230074C030 /* FieldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldLabel.swift; sourceTree = "<group>"; };
+		56960E2C20E8F0D80074C030 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				56960E2A20E8DB230074C030 /* FieldLabel.swift */,
+				56960E2C20E8F0D80074C030 /* GradientBackground.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56960E2420E6E5530074C030 /* TransactionListModels.swift in Sources */,
+				56960E2D20E8F0D80074C030 /* GradientBackground.swift in Sources */,
 				56960E2620E6E5530074C030 /* TransactionListInteractor.swift in Sources */,
 				56960E2520E6E5530074C030 /* TransactionListViewController.swift in Sources */,
 				56960DFB20E6E2680074C030 /* AppDelegate.swift in Sources */,

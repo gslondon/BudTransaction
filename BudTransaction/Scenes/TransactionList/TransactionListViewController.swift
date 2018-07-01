@@ -62,7 +62,8 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradientBackground(view: self.view)
+        let gb = GradientBackground()
+        gb.setGradientBackground(view: self.view)
         doSomething()
     }
     
