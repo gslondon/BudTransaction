@@ -20,6 +20,7 @@
 		56960E2820E84C540074C030 /* Llyods_Favicon-1_161201_091641.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */; };
 		56960E2B20E8DB230074C030 /* FieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2A20E8DB230074C030 /* FieldLabel.swift */; };
 		56960E2D20E8F0D80074C030 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2C20E8F0D80074C030 /* GradientBackground.swift */; };
+		56960E3020E8F83F0074C030 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2F20E8F83F0074C030 /* TransactionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Llyods_Favicon-1_161201_091641.jpg"; sourceTree = "<group>"; };
 		56960E2A20E8DB230074C030 /* FieldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldLabel.swift; sourceTree = "<group>"; };
 		56960E2C20E8F0D80074C030 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		56960E2F20E8F83F0074C030 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		56960E1C20E6E2DF0074C030 /* TransactionList */ = {
 			isa = PBXGroup;
 			children = (
+				56960E2E20E8F8110074C030 /* TableViewCells */,
 				56960E1D20E6E5530074C030 /* TransactionListPresenter.swift */,
 				56960E1E20E6E5530074C030 /* TransactionListWorker.swift */,
 				56960E1F20E6E5530074C030 /* TransactionListModels.swift */,
@@ -147,6 +150,14 @@
 				56960E2C20E8F0D80074C030 /* GradientBackground.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		56960E2E20E8F8110074C030 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				56960E2F20E8F83F0074C030 /* TransactionTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 				56960DFB20E6E2680074C030 /* AppDelegate.swift in Sources */,
 				56960E2320E6E5530074C030 /* TransactionListWorker.swift in Sources */,
 				56960E2220E6E5530074C030 /* TransactionListPresenter.swift in Sources */,
+				56960E3020E8F83F0074C030 /* TransactionTableViewCell.swift in Sources */,
 				56960E2B20E8DB230074C030 /* FieldLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

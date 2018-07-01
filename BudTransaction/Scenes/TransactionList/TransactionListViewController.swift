@@ -12,22 +12,13 @@
 
 import UIKit
 
-class TransactionTableViewCell: UITableViewCell {
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var dateLabel: FieldLabel!
-    @IBOutlet weak var valueLabel: FieldLabel!
-    @IBOutlet weak var valueWidthConstraint: NSLayoutConstraint!
-}
-
-
 protocol TransactionListDisplayLogic: class {
     func displaySomething(viewModel: TransactionList.Something.ViewModel)
 }
 
 class TransactionListViewController: UIViewController, TransactionListDisplayLogic, UITableViewDataSource, UITableViewDelegate {
-    
-    
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     var interactor: TransactionListBusinessLogic?
     
@@ -54,11 +45,6 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
         presenter.viewController = viewController
     }
     
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-    
     // MARK: View lifecycle
     
     override func viewDidLoad() {
@@ -71,15 +57,21 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
     // MARK: Do something
     
     func doSomething() {
+        loadingView.isHidden = false
+        activityIndicator.startAnimating()
+        tableView.isHidden = true
         let request = TransactionList.Something.Request()
         interactor?.doSomething(request: request)
     }
     
     func displaySomething(viewModel: TransactionList.Something.ViewModel) {
+        activityIndicator.stopAnimating()
+        loadingView.isHidden = true
+        tableView.isHidden = false
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 37
+        return 16
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

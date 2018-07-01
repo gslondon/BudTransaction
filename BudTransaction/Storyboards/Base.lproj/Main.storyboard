@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ryx-sc-U5n">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ryx-sc-U5n">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.44001423849594645" green="0.43788856584620756" blue="0.44213991114568529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -109,23 +109,42 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="YE4-KY-ETf"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0p-y9-4Un">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ca-Dfh">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Sd4-Ca-Dfh" firstAttribute="centerX" secondItem="f0p-y9-4Un" secondAttribute="centerX" id="5en-iJ-FmR"/>
+                                    <constraint firstItem="Sd4-Ca-Dfh" firstAttribute="centerY" secondItem="f0p-y9-4Un" secondAttribute="centerY" id="sxT-4M-c4Q"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ryx-sc-U5n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5Cg-PK-0ij"/>
+                            <constraint firstItem="f0p-y9-4Un" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QE6-Kg-X9y"/>
                             <constraint firstItem="ryx-sc-U5n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QeH-cT-PGE"/>
+                            <constraint firstItem="f0p-y9-4Un" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RaA-Lt-Icg"/>
                             <constraint firstItem="ryx-sc-U5n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vcv-RJ-dRw"/>
+                            <constraint firstItem="f0p-y9-4Un" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fIi-uV-Ip5"/>
                             <constraint firstItem="ryx-sc-U5n" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gFR-Ar-V00"/>
+                            <constraint firstItem="f0p-y9-4Un" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vBC-dQ-LVu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Transactions" id="fwW-ol-9at"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Sd4-Ca-Dfh" id="0Ez-DB-D5h"/>
+                        <outlet property="loadingView" destination="f0p-y9-4Un" id="IJk-4G-vmS"/>
                         <outlet property="tableView" destination="ryx-sc-U5n" id="kLu-I4-3N4"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1078.5" y="133.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sKn-9S-OfP">
