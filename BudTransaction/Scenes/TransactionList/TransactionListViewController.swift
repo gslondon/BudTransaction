@@ -17,6 +17,7 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: FieldLabel!
     @IBOutlet weak var valueLabel: FieldLabel!
+    @IBOutlet weak var valueWidthConstraint: NSLayoutConstraint!
 }
 
 
@@ -83,24 +84,15 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTableViewCell") as! TransactionTableViewCell
-        setCell(image: cell.iconImageView)
+        configureCell(cell: cell)
         return cell
     }
     
-    func setCell(image: UIImageView) {
-        image.layer.cornerRadius = image.frame.size.width / 2
-        image.clipsToBounds = true
+    func configureCell(cell: TransactionTableViewCell) {
+        cell.iconImageView.layer.cornerRadius = cell.iconImageView.frame.size.width / 2
+        cell.iconImageView.clipsToBounds = true
+        cell.valueLabel.sizeToFit()
+        cell.valueWidthConstraint.constant += 15
+        view.layoutIfNeeded()
     }
-    
-    func setGradientBackground(view: UIView) {
-        let colorTop =  UIColor(red: 60.0/255.0, green: 60.0/255.0, blue: 60.0/255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0).cgColor
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [ colorTop, colorBottom]
-        gradientLayer.locations = [ 0.0, 1.0]
-        gradientLayer.frame = view.bounds
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
-
 }
