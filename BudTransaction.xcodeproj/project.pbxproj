@@ -18,6 +18,7 @@
 		56960E2520E6E5530074C030 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2020E6E5530074C030 /* TransactionListViewController.swift */; };
 		56960E2620E6E5530074C030 /* TransactionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2120E6E5530074C030 /* TransactionListInteractor.swift */; };
 		56960E2820E84C540074C030 /* Llyods_Favicon-1_161201_091641.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */; };
+		56960E2B20E8DB230074C030 /* FieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2A20E8DB230074C030 /* FieldLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		56960E2020E6E5530074C030 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		56960E2120E6E5530074C030 /* TransactionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractor.swift; sourceTree = "<group>"; };
 		56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Llyods_Favicon-1_161201_091641.jpg"; sourceTree = "<group>"; };
+		56960E2A20E8DB230074C030 /* FieldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				56960DFA20E6E2680074C030 /* AppDelegate.swift */,
 				56960E1B20E6E2A00074C030 /* Scenes */,
 				56960E1A20E6E27F0074C030 /* Storyboards */,
+				56960E2920E8DAC90074C030 /* Shared */,
 				56960E0620E6E2680074C030 /* Info.plist */,
 				56960E0120E6E2680074C030 /* Assets.xcassets */,
 			);
@@ -133,6 +136,14 @@
 				56960E2120E6E5530074C030 /* TransactionListInteractor.swift */,
 			);
 			path = TransactionList;
+			sourceTree = "<group>";
+		};
+		56960E2920E8DAC90074C030 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				56960E2A20E8DB230074C030 /* FieldLabel.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				56960DFB20E6E2680074C030 /* AppDelegate.swift in Sources */,
 				56960E2320E6E5530074C030 /* TransactionListWorker.swift in Sources */,
 				56960E2220E6E5530074C030 /* TransactionListPresenter.swift in Sources */,
+				56960E2B20E8DB230074C030 /* FieldLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
