@@ -17,6 +17,7 @@
 		56960E2420E6E5530074C030 /* TransactionListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E1F20E6E5530074C030 /* TransactionListModels.swift */; };
 		56960E2520E6E5530074C030 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2020E6E5530074C030 /* TransactionListViewController.swift */; };
 		56960E2620E6E5530074C030 /* TransactionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2120E6E5530074C030 /* TransactionListInteractor.swift */; };
+		56960E2820E84C540074C030 /* Llyods_Favicon-1_161201_091641.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		56960E1F20E6E5530074C030 /* TransactionListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListModels.swift; sourceTree = "<group>"; };
 		56960E2020E6E5530074C030 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		56960E2120E6E5530074C030 /* TransactionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractor.swift; sourceTree = "<group>"; };
+		56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Llyods_Favicon-1_161201_091641.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		56960DF920E6E2680074C030 /* BudTransaction */ = {
 			isa = PBXGroup;
 			children = (
+				56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */,
 				56960DFA20E6E2680074C030 /* AppDelegate.swift */,
 				56960E1B20E6E2A00074C030 /* Scenes */,
 				56960E1A20E6E27F0074C030 /* Storyboards */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56960E0520E6E2680074C030 /* LaunchScreen.storyboard in Resources */,
+				56960E2820E84C540074C030 /* Llyods_Favicon-1_161201_091641.jpg in Resources */,
 				56960E0220E6E2680074C030 /* Assets.xcassets in Resources */,
 				56960E0020E6E2680074C030 /* Main.storyboard in Resources */,
 			);
