@@ -68,12 +68,21 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
     }
     
     func displayTransactions(viewModel: TransactionList.Index.ViewModel) {
-        DispatchQueue.main.async {
+        
+        if Thread.isMainThread {
             self.activityIndicator.stopAnimating()
             self.loadingView.isHidden = true
             self.tableView.isHidden = false
             self.transactions = viewModel.transactions
             self.tableView.reloadData()
+        } else {
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+                self.loadingView.isHidden = true
+                self.tableView.isHidden = false
+                self.transactions = viewModel.transactions
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -81,6 +90,10 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
         return 65.0
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactions.count
     }

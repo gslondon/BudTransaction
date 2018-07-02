@@ -22,12 +22,11 @@ protocol TransactionListDataStore {
 
 class TransactionListInteractor: TransactionListBusinessLogic, TransactionListDataStore {
     var presenter: TransactionListPresentationLogic?
-    var worker: TransactionListWorker?
+    var worker = TransactionListWorker()
 
     func fetchTransactions(request: TransactionList.Index.Request) {
-        worker = TransactionListWorker()
-        worker?.fetchTransactionsFromRemote(request, completionHandler: { (response) in
-            self.presenter?.presentSomething(response: response)
+        worker.fetchTransactionsFromRemote(request, completionHandler: { (response) in
+            self.presenter?.presentTransactions(response: response)
         })
     }
 }

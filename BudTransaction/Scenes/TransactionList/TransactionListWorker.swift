@@ -21,8 +21,7 @@ class TransactionListWorker {
         let URLString: String = "\(API.service)\(request.version!)/\(request.uniqueId!)"
         
         guard let url = URL(string: URLString) else {
-            print("Error")
-            let error = NSError(domain: "com.bud.transactionlist", code: 0, userInfo: [NSLocalizedDescriptionKey: "Url is malformed"])
+            print("Error: malformed url")
             completionHandler(TransactionList.Index.Response(data: []))
             return
         }
@@ -32,7 +31,7 @@ class TransactionListWorker {
         let session = URLSession(configuration: config)
         let task = session.dataTask(with: urlRequest, completionHandler: {(data, response, error) -> Void in
             if (error != nil) {
-                print(error as Any)
+                print("Error: ", error as Any)
                 completionHandler(TransactionList.Index.Response(data: []))
                 return
             }
@@ -43,7 +42,7 @@ class TransactionListWorker {
                 let response = try decoder.decode(TransactionList.Index.Response.self, from: data)
                 completionHandler(TransactionList.Index.Response(data: response.data))
             } catch let err {
-                print("Err", err)
+                print("Error: ", err)
             }
         })
         task.resume()
