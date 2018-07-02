@@ -13,7 +13,6 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: FieldLabel!
     @IBOutlet weak var valueLabel: FieldLabel!
-    @IBOutlet weak var valueWidthConstraint: NSLayoutConstraint!
 
     override func awakeFromNib() {
         super.awakeFromNib()
