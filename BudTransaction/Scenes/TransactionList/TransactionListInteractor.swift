@@ -13,7 +13,7 @@
 import UIKit
 
 protocol TransactionListBusinessLogic {
-    func doSomething(request: TransactionList.Something.Request)
+    func fetchTransactions(request: TransactionList.Index.Request)
 }
 
 protocol TransactionListDataStore {
@@ -24,13 +24,10 @@ class TransactionListInteractor: TransactionListBusinessLogic, TransactionListDa
     var presenter: TransactionListPresentationLogic?
     var worker: TransactionListWorker?
 
-    // MARK: Do something
-
-    func doSomething(request: TransactionList.Something.Request) {
+    func fetchTransactions(request: TransactionList.Index.Request) {
         worker = TransactionListWorker()
-        worker?.doSomeWork()
-
-        let response = TransactionList.Something.Response()
-        presenter?.presentSomething(response: response)
+        worker?.fetchTransactionsFromRemote(request, completionHandler: { (response) in
+            self.presenter?.presentSomething(response: response)
+        })
     }
 }
