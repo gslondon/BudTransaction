@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol TransactionListDisplayLogic: class {
     func displayTransactions(viewModel: TransactionList.Index.ViewModel)
@@ -97,6 +98,7 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
     }
     
     func populateCell(cell: TransactionTableViewCell, row: Int) {
+        cell.iconImageView.sd_setImage(with: URL(string: transactions[row].product.icon))
         cell.descriptionLabel.text = transactions[row].description.capitalized
         cell.valueLabel.text = getFormatForCurrencyCode(code: transactions[row].amount.currency_iso, value: transactions[row].amount.value as NSNumber)
         let dateParts = transactions[row].date.components(separatedBy: "-")

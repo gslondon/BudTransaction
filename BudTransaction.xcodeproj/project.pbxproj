@@ -18,11 +18,9 @@
 		56960E2420E6E5530074C030 /* TransactionListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E1F20E6E5530074C030 /* TransactionListModels.swift */; };
 		56960E2520E6E5530074C030 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2020E6E5530074C030 /* TransactionListViewController.swift */; };
 		56960E2620E6E5530074C030 /* TransactionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2120E6E5530074C030 /* TransactionListInteractor.swift */; };
-		56960E2820E84C540074C030 /* Llyods_Favicon-1_161201_091641.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */; };
 		56960E2B20E8DB230074C030 /* FieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2A20E8DB230074C030 /* FieldLabel.swift */; };
 		56960E2D20E8F0D80074C030 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2C20E8F0D80074C030 /* GradientBackground.swift */; };
 		56960E3020E8F83F0074C030 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56960E2F20E8F83F0074C030 /* TransactionTableViewCell.swift */; };
-		56A7EDFF20EA1FB900C34712 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 56A7EDFE20EA1FB900C34712 /* Podfile */; };
 		90B67FB72C6815236A9F0505 /* Pods_BudTransaction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45ED05F659FE93E146755B48 /* Pods_BudTransaction.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,11 +52,9 @@
 		56960E1F20E6E5530074C030 /* TransactionListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListModels.swift; sourceTree = "<group>"; };
 		56960E2020E6E5530074C030 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		56960E2120E6E5530074C030 /* TransactionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractor.swift; sourceTree = "<group>"; };
-		56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Llyods_Favicon-1_161201_091641.jpg"; sourceTree = "<group>"; };
 		56960E2A20E8DB230074C030 /* FieldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldLabel.swift; sourceTree = "<group>"; };
 		56960E2C20E8F0D80074C030 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		56960E2F20E8F83F0074C030 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
-		56A7EDFE20EA1FB900C34712 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		960B539E19DA8494AD29B9D4 /* Pods-BudTransaction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransaction.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransaction/Pods-BudTransaction.release.xcconfig"; sourceTree = "<group>"; };
 		D53920FA78EDE806EFA82074 /* Pods-BudTransactionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionTests/Pods-BudTransactionTests.release.xcconfig"; sourceTree = "<group>"; };
 		F98017ADE9FDFCED0DEE98D7 /* Pods-BudTransaction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransaction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransaction/Pods-BudTransaction.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,8 +114,6 @@
 		56960DF920E6E2680074C030 /* BudTransaction */ = {
 			isa = PBXGroup;
 			children = (
-				56A7EDFE20EA1FB900C34712 /* Podfile */,
-				56960E2720E84C530074C030 /* Llyods_Favicon-1_161201_091641.jpg */,
 				56960DFA20E6E2680074C030 /* AppDelegate.swift */,
 				56960E1B20E6E2A00074C030 /* Scenes */,
 				56960E1A20E6E27F0074C030 /* Storyboards */,
@@ -279,9 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56A7EDFF20EA1FB900C34712 /* Podfile in Resources */,
 				56960E0520E6E2680074C030 /* LaunchScreen.storyboard in Resources */,
-				56960E2820E84C540074C030 /* Llyods_Favicon-1_161201_091641.jpg in Resources */,
 				56960E0220E6E2680074C030 /* Assets.xcassets in Resources */,
 				56960E0020E6E2680074C030 /* Main.storyboard in Resources */,
 			);
