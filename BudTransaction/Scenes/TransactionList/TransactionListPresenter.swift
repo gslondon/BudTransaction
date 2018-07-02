@@ -13,7 +13,7 @@
 import UIKit
 
 protocol TransactionListPresentationLogic {
-    func presentSomething(response: TransactionList.Something.Response)
+    func presentSomething(response: TransactionList.Index.Response)
 }
 
 class TransactionListPresenter: TransactionListPresentationLogic {
@@ -21,8 +21,8 @@ class TransactionListPresenter: TransactionListPresentationLogic {
     
     // MARK: Do something
     
-    func presentSomething(response: TransactionList.Something.Response) {
-        let viewModel = TransactionList.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentSomething(response: TransactionList.Index.Response) {
+        let viewModel = TransactionList.Index.ViewModel(transactions: response.data, errorMessage: "")
+        viewController?.displayTransactions(viewModel: viewModel)
     }
 }
