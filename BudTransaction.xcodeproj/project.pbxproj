@@ -100,6 +100,7 @@
 		56960DEE20E6E2680074C030 = {
 			isa = PBXGroup;
 			children = (
+				56A7EE0820EA490400C34712 /* ReadMe.md */,
 				56960DF920E6E2680074C030 /* BudTransaction */,
 				56960E0E20E6E2690074C030 /* BudTransactionTests */,
 				56960DF820E6E2680074C030 /* Products */,
@@ -126,7 +127,6 @@
 				56960E2920E8DAC90074C030 /* Shared */,
 				56960E0620E6E2680074C030 /* Info.plist */,
 				56960E0120E6E2680074C030 /* Assets.xcassets */,
-				56A7EE0820EA490400C34712 /* ReadMe.md */,
 			);
 			path = BudTransaction;
 			sourceTree = "<group>";
