@@ -4,7 +4,7 @@
 This is a simple application that connects to a remote service and retrieves a list of transactional data.
 
 ## Architecture Approach
-This application is written for iOS devices using Xcode 9.4 .1, Swift 4 in June 2018.
+This application is written for iOS devices runnings iOS 11.4 amd was made using Xcode 9.4 .1, Swift 4 in June 2018.
 The application is written using a Clean Architecture approach that inplements dependancy decoupling. The project was initiated using the [CleanSwift](https://clean-swift.com/handbook/) templates by Raymond Law.
 
 **Clean Swift comprises of the following entities: -** 
