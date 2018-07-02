@@ -13,12 +13,33 @@
 import UIKit
 
 enum TransactionList {
-    enum Something {
+    enum Index {
         struct Request {
+            var version: String?
+            var uniqueId: String?
         }
-        struct Response {
+        struct Response: Decodable {
+            let data: [Transaction]
         }
-        struct ViewModel {
+
+        struct Transaction: Decodable {
+            let date: String
+            let description: String
+            let amount: Amount
+            let product: Product
+        }
+        
+        struct Amount: Decodable {
+            let value: Double
+            let currency_iso: String
+        }
+        struct Product: Decodable {
+            let icon: String
+        }
+
+        struct ViewModel: Decodable {
+            let transactions: [Transaction]
+            var errorMessage: String?
         }
     }
 }
