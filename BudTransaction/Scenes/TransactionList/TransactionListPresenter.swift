@@ -19,8 +19,6 @@ protocol TransactionListPresentationLogic {
 class TransactionListPresenter: TransactionListPresentationLogic {
     weak var viewController: TransactionListDisplayLogic?
     
-    // MARK: Do something
-    
     func presentTransactions(response: TransactionList.Index.Response) {
         let viewModel = TransactionList.Index.ViewModel(transactions: response.data, errorMessage: "")
         viewController?.displayTransactions(viewModel: viewModel)

@@ -58,7 +58,6 @@ class TransactionListViewControllerTests: XCTestCase {
     class ViewSpy: UIView {
     }
     
-
     // Tests
     
     func testNumberOfSectionsInTableViewShouldAlwaysBeOne() {
@@ -107,5 +106,5 @@ class TransactionListViewControllerTests: XCTestCase {
         
         // then
         XCTAssert(tableViewSpy.reloadDataCalled, "Displaying fetched transactions should reload the tableview in TransactionListViewController")
-    }    
+    }
 }

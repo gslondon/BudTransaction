@@ -58,5 +58,4 @@ class TransactionListInteractorTests: XCTestCase {
         XCTAssert(transactionListPresentationLogicSpy.presentTransactionsCalled, "presentTransactions must be called from TransactionListInteractor")
         XCTAssert(transactionListWorkerSpy.fetchTransactionsFromRemoteCalled, "getTransactions must call fetchTransactionsFromRemote from TransactionListInteractor")
     }
-
 }

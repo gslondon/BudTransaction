@@ -44,5 +44,4 @@ class TransactionListPresenterTests: XCTestCase {
         // then
         XCTAssert(transactionListDisplayLogicSpy.displayTransactionsCalled, "Presenter should call viewcontroller to present results")
     }
-
 }

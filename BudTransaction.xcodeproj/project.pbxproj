@@ -23,6 +23,7 @@
 		56A7EE0320EA22DA00C34712 /* TransactionListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7EE0220EA22DA00C34712 /* TransactionListPresenterTests.swift */; };
 		56A7EE0520EA250200C34712 /* TransactionListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7EE0420EA250200C34712 /* TransactionListInteractorTests.swift */; };
 		56A7EE0720EA2C5000C34712 /* TransactionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7EE0620EA2C5000C34712 /* TransactionListViewControllerTests.swift */; };
+		56A7EE0920EA490400C34712 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 56A7EE0820EA490400C34712 /* ReadMe.md */; };
 		90B67FB72C6815236A9F0505 /* Pods_BudTransaction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45ED05F659FE93E146755B48 /* Pods_BudTransaction.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		56A7EE0220EA22DA00C34712 /* TransactionListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListPresenterTests.swift; sourceTree = "<group>"; };
 		56A7EE0420EA250200C34712 /* TransactionListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractorTests.swift; sourceTree = "<group>"; };
 		56A7EE0620EA2C5000C34712 /* TransactionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewControllerTests.swift; sourceTree = "<group>"; };
+		56A7EE0820EA490400C34712 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		960B539E19DA8494AD29B9D4 /* Pods-BudTransaction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransaction.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransaction/Pods-BudTransaction.release.xcconfig"; sourceTree = "<group>"; };
 		D53920FA78EDE806EFA82074 /* Pods-BudTransactionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionTests/Pods-BudTransactionTests.release.xcconfig"; sourceTree = "<group>"; };
 		F98017ADE9FDFCED0DEE98D7 /* Pods-BudTransaction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransaction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransaction/Pods-BudTransaction.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				56960E2920E8DAC90074C030 /* Shared */,
 				56960E0620E6E2680074C030 /* Info.plist */,
 				56960E0120E6E2680074C030 /* Assets.xcassets */,
+				56A7EE0820EA490400C34712 /* ReadMe.md */,
 			);
 			path = BudTransaction;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				56960E0520E6E2680074C030 /* LaunchScreen.storyboard in Resources */,
 				56960E0220E6E2680074C030 /* Assets.xcassets in Resources */,
+				56A7EE0920EA490400C34712 /* ReadMe.md in Resources */,
 				56960E0020E6E2680074C030 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

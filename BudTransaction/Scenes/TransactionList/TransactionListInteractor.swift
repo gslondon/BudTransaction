@@ -16,11 +16,7 @@ protocol TransactionListBusinessLogic {
     func fetchTransactions(request: TransactionList.Index.Request)
 }
 
-protocol TransactionListDataStore {
-
-}
-
-class TransactionListInteractor: TransactionListBusinessLogic, TransactionListDataStore {
+class TransactionListInteractor: TransactionListBusinessLogic {
     var presenter: TransactionListPresentationLogic?
     var worker = TransactionListWorker()
 
