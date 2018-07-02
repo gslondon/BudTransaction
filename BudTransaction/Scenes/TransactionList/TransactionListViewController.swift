@@ -13,7 +13,7 @@
 import UIKit
 
 protocol TransactionListDisplayLogic: class {
-    func displaySomething(viewModel: TransactionList.Something.ViewModel)
+    func displayTransactions(viewModel: TransactionList.Index.ViewModel)
 }
 
 class TransactionListViewController: UIViewController, TransactionListDisplayLogic, UITableViewDataSource, UITableViewDelegate {
@@ -21,6 +21,7 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     var interactor: TransactionListBusinessLogic?
+    var transactions = [TransactionList.Index.Transaction]()
     
     // MARK: Object lifecycle
     
@@ -51,31 +52,41 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
         super.viewDidLoad()
         let gb = GradientBackground()
         gb.setGradientBackground(view: self.view)
-        doSomething()
+        tableView.tableFooterView = UIView()
+        getTransactions()
     }
     
     // MARK: Do something
     
-    func doSomething() {
+    func getTransactions() {
         loadingView.isHidden = false
         activityIndicator.startAnimating()
         tableView.isHidden = true
-        let request = TransactionList.Something.Request()
-        interactor?.doSomething(request: request)
+        let request = TransactionList.Index.Request(version: "v2", uniqueId: "5b33bdb43200008f0ad1e256")
+        interactor?.fetchTransactions(request: request)
     }
     
-    func displaySomething(viewModel: TransactionList.Something.ViewModel) {
-        activityIndicator.stopAnimating()
-        loadingView.isHidden = true
-        tableView.isHidden = false
+    func displayTransactions(viewModel: TransactionList.Index.ViewModel) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            self.loadingView.isHidden = true
+            self.tableView.isHidden = false
+            self.transactions = viewModel.transactions
+            self.tableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 16
+        return transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTableViewCell") as! TransactionTableViewCell
+        populateCell(cell: cell, row: indexPath.row)
         configureCell(cell: cell)
         return cell
     }
@@ -83,8 +94,23 @@ class TransactionListViewController: UIViewController, TransactionListDisplayLog
     func configureCell(cell: TransactionTableViewCell) {
         cell.iconImageView.layer.cornerRadius = cell.iconImageView.frame.size.width / 2
         cell.iconImageView.clipsToBounds = true
-        cell.valueLabel.sizeToFit()
-        cell.valueWidthConstraint.constant += 15
-        view.layoutIfNeeded()
+    }
+    
+    func populateCell(cell: TransactionTableViewCell, row: Int) {
+        cell.descriptionLabel.text = transactions[row].description.capitalized
+        cell.valueLabel.text = getFormatForCurrencyCode(code: transactions[row].amount.currency_iso, value: transactions[row].amount.value as NSNumber)
+        let dateParts = transactions[row].date.components(separatedBy: "-")
+        cell.dateLabel.text = String("\(dateParts[2])/\(dateParts[1])/\(dateParts[0])")
+    }
+    
+    func getFormatForCurrencyCode(code: String, value: NSNumber) -> String? {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.currencyCode = code
+        return currencyFormatter.string(from: value)
+    }
+
+    @IBAction func refreshTransactions(_ sender: Any) {
+        getTransactions()
     }
 }
